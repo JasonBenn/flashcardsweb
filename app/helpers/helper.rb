@@ -6,3 +6,6 @@ def login(user)
   redirect '/' 
 end
 
+def current_user
+  session[:user_id]
+end
