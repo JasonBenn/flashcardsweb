@@ -9,7 +9,11 @@
       </li>
     <% end %>
   </ol>
-  <% unless current_user %>
+  <% if current_user %>
+    <form id="logout-button" method="GET" action="/logout">
+      <input type="submit" value="logout">
+    </form>
+  <% else %>
     <%= erb :_login %>
     <%= erb :_signup %>
   <% end %>
