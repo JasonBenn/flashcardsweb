@@ -1,38 +1,9 @@
-body {
-  background-color: #DCDCDC;
-}
-
-.container {
-  position: relative;
-  text-align: center;
-  width: 600px;
-  min-height: 200px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 3px solid #888;
-  border-radius: 10px;
-  background-color: white;
-}
+/* GRANDMASTER FLASH, footer, background */
 
 header {
   text-align: center;
 }
 
-ol {
-  list-style: none;
-  padding-left: 0;
-  margin-right: 20%;
-}
-
-#logo, #logo a {
-  margin: 20px 0;
-  font-family: Georgia;
-  font-size: 60px;
-  font-weight: 700;
-  font-style: none;
-  text-decoration: none;
-  color: #222;
-}
 #logo a .grandmaster {
   font-family: 'Fugaz One', cursive;
 }
@@ -45,6 +16,69 @@ footer {
   font-family: 'Alef', sans-serif;
   color:  #444;
 }
+
+body {
+  background-color: #DCDCDC;
+}
+
+/* Container */
+
+.container {
+  position: relative;
+  text-align: center;
+  width: 600px;
+  min-height: 400px;
+  overflow: scroll;
+  margin: 0 auto;
+  padding: 20px;
+  border: 3px solid #888;
+  border-radius: 10px;
+  background-color: white;
+}
+
+
+/* Pick a deck */
+
+ol {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 auto;
+  font-size: 20px;
+  line-height: 30px;
+  width: 400px;
+}
+
+li a {
+  width: 200px;
+  float: left;
+  text-decoration: none;
+  color: #333;
+}
+
+#logout, #history, #deck span {
+  position: absolute;
+  margin: 10px;
+  bottom: 0%;
+}
+
+#logout { left: 0%; }
+#history { right: 0%; }
+#deck span { margin-left: -50%; }
+
+
+/* History */
+
+#logo, #logo a {
+  margin: 20px 0;
+  font-family: Georgia;
+  font-size: 60px;
+  font-weight: 700;
+  font-style: none;
+  text-decoration: none;
+  color: #222;
+}
+
+
 
 input {
   width: 20%;
@@ -67,13 +101,6 @@ label {
   text-transform: uppercase;
   color: #222;
 
-}
-
-#logout {
-  position: absolute;
-  margin: 10px 10px;
-  left: 0%;
-  bottom: 0%;
 }
 
 #input, .feedback {
