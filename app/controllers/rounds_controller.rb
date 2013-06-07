@@ -13,4 +13,3 @@ post '/increment_counter' do
     round.first.save
   end
 end
-
