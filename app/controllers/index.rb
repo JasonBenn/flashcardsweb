@@ -11,7 +11,7 @@ get '/deck/:id' do
                           :user_id => session[:user_id])
   end
   erb :card
-end
+end 
 
 post '/card' do
   @card = Deck.find(1).cards.sample

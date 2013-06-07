@@ -18,7 +18,8 @@ $(document).ready(function() {
       $('#input').show();  
     });
     var pressed = $(this).attr('id');
-    $.post('/increment_counter', {pressed: pressed});
-  });_
+    var data = {pressed: pressed, deck_id: deck_id};
+    $.post('/increment_counter', data);
+  });
 });
 
