@@ -15,11 +15,17 @@ header {
 #logo, #logo a {
   margin: 20px 0;
   font-family: Georgia;
-  font-size: 36px;
+  font-size: 60px;
   font-weight: 700;
   font-style: none;
   text-decoration: none;
   color: #222;
+}
+#logo a .grandmaster {
+  font-family: 'Fugaz One', cursive;
+}
+#logo a .flash {
+  font-family: 'Trade Winds', cursive;
 }
 
 footer {
@@ -33,3 +39,4 @@ input {
 label {
   width: 5%;
 }
+
