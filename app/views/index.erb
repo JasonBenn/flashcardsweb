@@ -9,7 +9,9 @@
       </li>
     <% end %>
   </ol>
-<%= erb :_login %>
-<%= erb :_signup %>
+  <% unless current_user %>
+    <%= erb :_login %>
+    <%= erb :_signup %>
+  <% end %>
 </div>
 
