@@ -2,9 +2,9 @@ $(document).ready(function() {
   $('#back').hide();
   $('.feedback').hide();
 
-  $('body').on('click', '#input', function() { //click on a button, delegating a answer?
-    $(this).prev().children('#back').show(); //the hidden something
-    $('#input').hide(); //the hidden something
+  $('body').on('click', '#input', function() {
+    $(this).prev().children('#back').show();
+    $('#input').hide();
     $(this).next().show('.feedback'); 
   });
 

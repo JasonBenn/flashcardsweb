@@ -1,7 +1,9 @@
 
 def login(user)
-  if User.where(user.username == params[:username] && user.password == params[:password]).count == 1
-    session[:user_id] = user.id
+  if returned_user = User.where('username = ?', params[:username]).first
+    if returned_user.password == params[:password]
+      session[:user_id] = user.id
+    end
   end
   redirect '/' 
 end

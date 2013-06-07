@@ -1,0 +1,25 @@
+<h1>Welcome to Flash Cards</h1>
+<h2>Rounds for <%= @rounds.first.user.username =></h2>
+
+<div id="rounds">
+  <ol>
+    <% @rounds.each do |round| %>
+      <li> 
+        <a href="/round/<%= round.id %>">Deck Name: <%= round.deck.name %></a>Created at:<%= deck.created_at %>
+      </li>
+      <div id="round-stats">
+        <%= erb :_round_stats %>
+      </div>
+    <% end %>
+  </ol>
+  
+  <% if current_user %>
+    <form id="logout-button" method="GET" action="/logout">
+      <input id="logout" type="submit" value="logout">
+    </form>
+  <% else %>
+    <%= erb :_login %>
+    <%= erb :_signup %>
+  <% end %>
+</div>
+

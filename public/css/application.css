@@ -3,9 +3,8 @@
   text-align: center;
   width: 600px;
   min-height: 200px;
-  overflow: scroll;
   margin: 0 auto;
-  padding: 0px 20px 20px 20px;
+  padding: 20px;
   border: 1px dotted black;
 }
 
@@ -57,13 +56,10 @@ label {
 #input, .feedback {
   position: relative;
   width: auto;
-}
-
-#game {
-  height: 100%;
+  margin-top: 100%;
 }
 
 #input input, .feedback input {
   margin: 10px 10px;
-  bottom: 0%;
+  /*bottom: 0%;*/
 }

@@ -7,8 +7,9 @@ end
 
 
 post '/login' do
-  @user = User.find_by_username(params[:username])  
-  login(@user)
+  user = User.find_by_username(params[:username])  
+  puts "User object: #{user.inspect}"
+  login(user)
 end
 
 get '/logout' do 
