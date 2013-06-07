@@ -2,13 +2,13 @@ post '/signup' do
   @user = User.create(:username => params[:username], 
                       :email => params[:email], 
                       :password => params[:password])
-  @user.login
+  login(@user)
 end
 
 
 post '/login' do
   @user = User.find_by_username(params[:username])  
-  @user.login
+  login(@user)
 end
 
 get '/logout' do 
