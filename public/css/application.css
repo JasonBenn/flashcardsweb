@@ -1,3 +1,7 @@
+body {
+  background-color: #DCDCDC;
+}
+
 .container {
   position: relative;
   text-align: center;
@@ -5,7 +9,9 @@
   min-height: 200px;
   margin: 0 auto;
   padding: 20px;
-  border: 1px dotted black;
+  border: 3px solid #888;
+  border-radius: 10px;
+  background-color: white;
 }
 
 header {
@@ -36,6 +42,8 @@ ol {
 
 footer {
   text-align: center;
+  font-family: 'Alef', sans-serif;
+  color:  #444;
 }
 
 input {
@@ -44,6 +52,21 @@ input {
 
 label {
   width: 5%;
+}
+
+#front {
+  font-family: 'Fresca', sans-serif;
+  font-size: 30px;
+  color: #444;
+}
+
+#back {
+  font-family: 'Trade Winds', cursive;
+  font-size: 46px;
+  font-weight: 100;
+  text-transform: uppercase;
+  color: #222;
+
 }
 
 #logout {
@@ -56,10 +79,9 @@ label {
 #input, .feedback {
   position: relative;
   width: auto;
-  margin-top: 100%;
+  margin-top: 30%;
 }
 
 #input input, .feedback input {
   margin: 10px 10px;
-  /*bottom: 0%;*/
 }
