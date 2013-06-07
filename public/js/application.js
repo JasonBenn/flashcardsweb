@@ -5,7 +5,7 @@ $(document).ready(function() {
   $('body').on('click', '#input', function() { //click on a button, delegating a answer?
     $(this).prev().children('#back').show('hidden'); //the hidden something
     $(this).next().show('.feedback'); 
-    // $('#input').hide(); //the hidden something
+    $('#input').hide(); //the hidden something
   });
 
 
@@ -15,9 +15,10 @@ $(document).ready(function() {
       $('#card').append(card);
       $('#back').hide();
       $('.feedback').hide();
-    })
+      $('#input').show();  
+    });
+    var pressed = $(this).attr('id');
+    $.post('/increment_counter', {pressed: pressed});
   });_
-
-  $.
 });
 
