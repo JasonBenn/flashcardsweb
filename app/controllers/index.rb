@@ -9,7 +9,6 @@ get '/deck/:id' do
   if current_user
     @round = Round.create(:deck_id => @deck.id,
                           :user_id => session[:user_id])
-    puts @round
   end
   erb :card
 end
