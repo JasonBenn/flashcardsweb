@@ -23,9 +23,13 @@ header {
 }
 
 footer {
-  text-align: center;
+  text-aligngn: center;
 }
 
-input, label {
-  width: 15%;
+input {
+  width: 20%;
+}
+
+label {
+  width: 5%;
 }

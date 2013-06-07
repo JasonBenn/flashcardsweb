@@ -246,7 +246,9 @@ NAMES
 
 require 'faker'
 
-Deck.create(:name => "Rap legends")
+User.create(username: 'dbc', email: 'dbc@dbc.com', password: 'pw')
+
+Deck.create(:name => "Rap legends", user_id: 1)
 
 10.times do
   Card.create(:front => Faker::Lorem.sentence(2), 
