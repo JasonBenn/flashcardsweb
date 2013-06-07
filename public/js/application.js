@@ -1,7 +1,24 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
+  $('#back').hide();
+  $('body').on('click', '#input', function() { //click on a button, delegating a answer?
+    $(this).prev().children('#back').show('hidden'); //the hidden something
+  });
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+  $('.feedback input').click(function() {
+    $.post('/card', function(card) {
+      $('#card').children().remove();
+      $('#card').append(card);
+      $('#back').hide();
+    })
+  });_
+
+  
+
 });
+
+// when a click happens on .feedback input
+// $.post(... , function(data) { 
+//  use data... 
+//  replaces text of $(#front).text( replacement text )
+//  replaces back
+// })

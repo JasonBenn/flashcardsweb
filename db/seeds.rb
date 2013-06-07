@@ -249,6 +249,8 @@ require 'faker'
 Deck.create(:name => "Rap legends")
 
 10.times do
-  Card.create(:front => Faker::Lorem.sentence(2), :back=>names.each_line.to_a.map(&:chomp).sample) 
+  Card.create(:front => Faker::Lorem.sentence(2), 
+    :back=>names.each_line.to_a.map(&:chomp).sample, 
+    :deck_id => 1) 
 end
 

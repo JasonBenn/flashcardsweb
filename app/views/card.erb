@@ -1,20 +1,16 @@
-<div id="card">
-  <% @deck.first.cards.each do |card| %>
-  <div id="front">
-    <p>card.front</p>
-  </div>
+<section id="game">
 
-  <div id="back" hidden>
-    <p>card.back</p>
+  <div id="card">
+    <%= erb :_card %>
   </div>
-
+  
   <div id="input">
     <input type="submit" value="show back">
+  </div>
 
-    <div class="feedback" hidden>
-      <input id="bad" type="submit" value="bad">
-      <input id="ok" type="submit" value="ok">
-      <input id="good" type="submit" value="good">
-    </div>
-  <% end %>
-
+  <div class="feedback">
+    <input id="bad" type="submit" value="bad">
+    <input id="ok" type="submit" value="ok">
+    <input id="good" type="submit" value="good">
+  </div>
+</section>
