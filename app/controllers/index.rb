@@ -4,7 +4,13 @@ get '/' do
 end
 
 get '/deck/:id' do
-  @card = Deck.find(params[:id]).cards.first
+  @deck = Deck.find(params[:id])
+  @card = @deck.cards.first
+  if current_user
+    @round = Round.create(:deck_id => @deck.id,
+                          :user_id => session[:user_id])
+    puts @round
+  end
   erb :card
 end
 
