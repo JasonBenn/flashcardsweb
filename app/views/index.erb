@@ -11,7 +11,7 @@
   </ol>
   <% if current_user %>
     <form id="logout-button" method="GET" action="/logout">
-      <input type="submit" value="logout">
+      <input id="logout" type="submit" value="logout">
     </form>
   <% else %>
     <%= erb :_login %>

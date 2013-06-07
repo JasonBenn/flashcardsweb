@@ -2,14 +2,21 @@
   position: relative;
   text-align: center;
   width: 600px;
+  min-height: 200px;
+  overflow: scroll;
   margin: 0 auto;
   padding: 0px 20px 20px 20px;
   border: 1px dotted black;
-
 }
 
 header {
   text-align: center;
+}
+
+ol {
+  list-style: none;
+  padding-left: 0;
+  margin-right: 20%;
 }
 
 #logo, #logo a {
@@ -29,7 +36,7 @@ header {
 }
 
 footer {
-  text-aligngn: center;
+  text-align: center;
 }
 
 input {
@@ -40,3 +47,23 @@ label {
   width: 5%;
 }
 
+#logout {
+  position: absolute;
+  margin: 10px 10px;
+  left: 0%;
+  bottom: 0%;
+}
+
+#input, .feedback {
+  position: relative;
+  width: auto;
+}
+
+#game {
+  height: 100%;
+}
+
+#input input, .feedback input {
+  margin: 10px 10px;
+  bottom: 0%;
+}

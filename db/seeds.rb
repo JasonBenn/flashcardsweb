@@ -247,12 +247,15 @@ NAMES
 require 'faker'
 
 User.create(username: 'dbc', email: 'dbc@dbc.com', password: 'pw')
+User.create(username: 'mark', email: 'mark@marky.com', password: 'pw')
 
-Deck.create(:name => "Rap legends", user_id: 1)
+10.times do |i|
+  Deck.create(:name => "Rap legends#{i}", user_id: [1, 2].sample)
+end
 
-10.times do
+500.times do
   Card.create(:front => Faker::Lorem.sentence(2), 
     :back=>names.each_line.to_a.map(&:chomp).sample, 
-    :deck_id => 1) 
+    :deck_id => (1..10).to_a.sample) 
 end
 
