@@ -1,5 +1,4 @@
-<h1>Welcome to Flash Cards</h1>
-<h2>Pick a deck:</h2>
+<h2>Choose a deck:</h2>
 
 <div id="deck">
   <ol>
@@ -17,9 +16,10 @@
     <form method="GET" action="/history">
       <input id="history" type="submit" value="history">
     </form>
-  <% else %>
-    <%= erb :_login %>
-    <%= erb :_signup %>
   <% end %>
 </div>
 
+<% unless current_user %>
+  <%= erb :_login %>
+  <%= erb :_signup %>
+<% end %>

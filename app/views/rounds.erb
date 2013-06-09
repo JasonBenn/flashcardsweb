@@ -5,7 +5,7 @@
   <ol>
     <% @rounds.each do |round| %>
       <li> 
-        <a href="/round/<%= round.id %>">Deck Name: <%= round.deck.name %></a>Created at:<%= round.deck.created_at %>
+        <span id="deck">Deck: <%= round.deck.name %></span><span id="studied">Studied:<%= round.deck.created_at.strftime("%d/%m/%y") %></span>
       </li>
       <div id="round-stats">
         <%= erb :_round_stats, locals: {round: round} %>
